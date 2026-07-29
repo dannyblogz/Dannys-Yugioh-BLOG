@@ -8,46 +8,55 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0;
+            padding: 40px 20px;
+            color: #ffffff; 
             
-            /* MAKES THE BACKGROUND SPACE THEME */
-            background-color: #0b0d19; /* Deep space dark blue fallback */
+            /* FALLBACK BACKGROUND COLOR */
+            background-color: #0b0d19; 
+
+            /* THIS STACKS THE FLYING DRAGON ON TOP OF THE SPACE STARS */
             background-image: 
-                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                url('blue-eyes.png.jpeg'), /* Layer 1: Your giant flying dragon artwork */
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px), /* Layer 2: Star layers */
                 radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
                 radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
-            background-size: 550px 550px, 350px 350px, 250px 250px;
-            background-position: 0 0, 40px 60px, 130px 270px;
             
-            /* Changes main text to white so it is readable on the dark background */
-            color: #ffffff; 
+            /* POSITION AND SIZE MANAGEMENT FOR THE GIANT FLYING DRAGON BACKGROUND */
+            background-repeat: no-repeat, repeat, repeat, repeat;
+            background-position: center 30%, 0 0, 40px 60px, 130px 270px;
+            background-size: 550px auto, 550px 550px, 350px 350px, 250px 250px;
+            background-attachment: fixed; /* Keeps the massive background dragon steady while scrolling */
         }
 
-        /* PINS THE DRAGON TO THE CORNER */
-        .corner-dragon {
-            position: fixed;   /* Locks it to the browser window screen */
-            bottom: 20px;      /* 20 pixels away from the bottom edge */
-            right: 20px;       /* 20 pixels away from the right edge */
-            width: 180px;      /* Resizes it neatly so it doesn't block text */
-            height: auto;
-            border: 2px solid #4a90e2; /* Cool glowing blue card border */
-            border-radius: 12px;
-            box-shadow: 0 0 15px rgba(74, 144, 226, 0.6); /* Blue glow effect */
-            z-index: 1000;     /* Ensures it always stays on top of text */
-        }
-
-        /* Styling for the blog text layout */
+        /* THE TEXT CONTAINER WITH HIGHER CONTRAST */
         .content-box {
-            background: rgba(255, 255, 255, 0.08); /* Semi-transparent background box */
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            /* Made the black box slightly darker (0.45) so the white text pops off the giant dragon behind it */
+            background: rgba(11, 13, 25, 0.45); 
             padding: 30px;
             border-radius: 12px;
-            backdrop-filter: blur(5px); /* Blurs the space stars behind the text box */
+            backdrop-filter: blur(8px); /* Blurs the flying dragon artwork subtly behind the container window */
             border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
         }
-        h1 { color: #54a0ff; margin-top: 0; }
+        
+        h1 { color: #54a0ff; margin-top: 0; text-shadow: 0 0 10px rgba(84, 160, 255, 0.5); }
         .date { color: #888; font-style: italic; }
+
+        /* KEEPING THE CORNER DRAGON CARD ACTIVE AS WELL */
+        .corner-dragon {
+            position: fixed;   
+            bottom: 20px;      
+            right: 20px;       
+            width: 140px;      
+            height: auto;
+            border: 2px solid #4a90e2; 
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(74, 144, 226, 0.6); 
+            z-index: 1000;     
+        }
     </style>
 </head>
 <body>
@@ -62,24 +71,14 @@
         
         <p>i really like yugioh as you can tell i play bewd tell me what deck you guys like!</p>
     </div>
-    <!-- COMMENT SECTION -->
-    <div class="content-box" style="margin-top: 30px;">
-        <h2 style="color: #54a0ff; margin-top: 0;">Discussion & Comments</h2>
-        
-        <!-- This creates a clean placeholder text area where people can type -->
-        <div id="cusdis_thread"
-  data-host="https://cusdis.com"
-  data-app-id="5fa8397a-9703-4ec0-80c7-a9a1c0de3422"
-  data-page-id="{{ PAGE_ID }}"
-  data-page-url="{{ PAGE_URL }}"
-  data-page-title="{{ PAGE_TITLE }}"
-></div>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
+    <!-- LIVE COMMENT SECTION PORTAL PLACEHOLDER -->
+    <div class="content-box">
+        <h2 style="color: #54a0ff; margin-top: 0;">Discussion & Comments</h2>
+        <p style="color: #aaa; font-size: 14px;">Comment server node pending sync connection...</p>
     </div>
 
-    <!-- THE DRAGON IN THE CORNER -->
-    <!-- It uses the class "corner-dragon" to activate the CSS position rule -->
+    <!-- TINY DRAGON CARD REMAINS PINS IN CORNER VIEW -->
     <img src="blue-eyes.png.jpeg" alt="Blue-Eyes White Dragon" class="corner-dragon">
 
 </body>

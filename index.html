@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blue-Eyes Space Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            
+            /* MAKES THE BACKGROUND SPACE THEME */
+            background-color: #0b0d19; /* Deep space dark blue fallback */
+            background-image: 
+                radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+            background-size: 550px 550px, 350px 350px, 250px 250px;
+            background-position: 0 0, 40px 60px, 130px 270px;
+            
+            /* Changes main text to white so it is readable on the dark background */
+            color: #ffffff; 
+        }
+
+        /* PINS THE DRAGON TO THE CORNER */
+        .corner-dragon {
+            position: fixed;   /* Locks it to the browser window screen */
+            bottom: 20px;      /* 20 pixels away from the bottom edge */
+            right: 20px;       /* 20 pixels away from the right edge */
+            width: 180px;      /* Resizes it neatly so it doesn't block text */
+            height: auto;
+            border: 2px solid #4a90e2; /* Cool glowing blue card border */
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(74, 144, 226, 0.6); /* Blue glow effect */
+            z-index: 1000;     /* Ensures it always stays on top of text */
+        }
+
+        /* Styling for the blog text layout */
+        .content-box {
+            background: rgba(255, 255, 255, 0.08); /* Semi-transparent background box */
+            padding: 30px;
+            border-radius: 12px;
+            backdrop-filter: blur(5px); /* Blurs the space stars behind the text box */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        h1 { color: #54a0ff; margin-top: 0; }
+        .date { color: #888; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div class="content-box">
+        <h1>Blue eyes blog</h1>
+        <p class="date">Published on: July 29, 2026</p>
+
+        <p>hi</p>
+        
+        <p>i made this by my self lol</p>
+        
+        <p>i really like yugioh as you can tell i play bewd tell me what deck you guys like!</p>
+    </div>
+    <!-- COMMENT SECTION -->
+    <div class="content-box" style="margin-top: 30px;">
+        <h2 style="color: #54a0ff; margin-top: 0;">Discussion & Comments</h2>
+        
+        <!-- This creates a clean placeholder text area where people can type -->
+        <form style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" placeholder="Your Name" style="padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); color: white;">
+            <textarea rows="4" placeholder="Join the conversation..." style="padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); color: white; resize: vertical;"></textarea>
+            
+            <button type="button" onclick="alert('Great comment! Once you publish your website online, these comments will save live.')" style="padding: 10px 20px; border-radius: 6px; border: none; background: #54a0ff; color: white; font-weight: bold; cursor: pointer; align-self: flex-start;">
+                Post Comment
+            </button>
+        </form>
+    </div>
+
+    <!-- THE DRAGON IN THE CORNER -->
+    <!-- It uses the class "corner-dragon" to activate the CSS position rule -->
+    <img src="blue-eyes.png.jpeg" alt="Blue-Eyes White Dragon" class="corner-dragon">
+
+</body>
+</html>

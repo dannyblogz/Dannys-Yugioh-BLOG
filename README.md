@@ -1,0 +1,2 @@
+# My-yugioh-blog
+hi

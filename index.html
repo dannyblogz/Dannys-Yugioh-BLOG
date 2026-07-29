@@ -67,14 +67,15 @@
         <h2 style="color: #54a0ff; margin-top: 0;">Discussion & Comments</h2>
         
         <!-- This creates a clean placeholder text area where people can type -->
-        <form style="display: flex; flex-direction: column; gap: 15px;">
-            <input type="text" placeholder="Your Name" style="padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); color: white;">
-            <textarea rows="4" placeholder="Join the conversation..." style="padding: 10px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.3); color: white; resize: vertical;"></textarea>
-            
-            <button type="button" onclick="alert('Great comment! Once you publish your website online, these comments will save live.')" style="padding: 10px 20px; border-radius: 6px; border: none; background: #54a0ff; color: white; font-weight: bold; cursor: pointer; align-self: flex-start;">
-                Post Comment
-            </button>
-        </form>
+        <div id="cusdis_thread"
+  data-host="https://cusdis.com"
+  data-app-id="5fa8397a-9703-4ec0-80c7-a9a1c0de3422"
+  data-page-id="{{ PAGE_ID }}"
+  data-page-url="{{ PAGE_URL }}"
+  data-page-title="{{ PAGE_TITLE }}"
+></div>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
     </div>
 
     <!-- THE DRAGON IN THE CORNER -->
